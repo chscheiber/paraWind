@@ -6,3 +6,17 @@ node_modules
 .env
 .env.*
 !.env.example
+
+# debug
+
+firestore-debug.log
+ui-debug.log
+
+# 
+
+/paraWind
+/.firebase
+/.github
+/.vscode
+/.svelte-kit
+.npmrc
