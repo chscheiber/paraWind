@@ -1,15 +1,73 @@
 @use 'sass:color';
-
 @use '@material/theme/color-palette';
 
 // Svelte Colors!
 @use '@material/theme/index' as theme with (
-  $primary: #ff3e00,
-  $secondary: #676778,
-  $surface: #fff,
-  $background: #fff,
+  $primary: #1565c0,
+  $secondary: #003c8f,
+  $surface: #fafafa,
+  $background: #5e92f3,
   $error: color-palette.$red-900
 );
+
+// Import the mixins.
+@use '@material/typography/index' as typography;
+
+//
+// Some defaults that may be helpful to you.
+// If you just want to use these, and not the classes, you can instead just
+// @use '@material/typography/index' as typography, and your CSS file will be smaller.
+//
+html {
+  @include typography.typography('body1');
+}
+
+h1 {
+  @include typography.typography('headline1');
+}
+
+h2 {
+  @include typography.typography('headline2');
+}
+
+h3 {
+  @include typography.typography('headline3');
+}
+
+h4 {
+  @include typography.typography('headline4');
+}
+
+h5 {
+  @include typography.typography('headline5');
+}
+
+h6 {
+  @include typography.typography('headline6');
+}
+
+caption {
+  @include typography.typography('caption');
+}
+
+code,
+pre {
+  font-family: 'Roboto Mono', monospace;
+}
+
+small {
+  font-size: 0.9em;
+}
+
+big {
+  font-size: 1.1em;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
 
 html,
 body {
@@ -23,4 +81,13 @@ a {
 }
 a:visited {
   color: color.scale(#40b3ff, $lightness: -35%);
+}
+
+Card.pw-card {
+  padding: 0px;
+
+  div[pw-card-header] {
+      background-color: aqua;
+  }
+
 }

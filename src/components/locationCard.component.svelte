@@ -9,20 +9,14 @@
 
 <!-- HTML -->
 <div class="card-container">
-	<Card padded>
-		<div class="card-header">
-			<h2 class="no-margin">{locationData.name}</h2>
+	<Card padded class="pw-card">
+		<div pw-card-header class="card-header">
+			<h5 class="no-margin">{locationData.name}</h5>
+			<p class="subtitle">{locationData.height} m</p>
 		</div>
 		<Separator />
 		<div class="card-body">
 			<List>
-				<Item>
-					<div class="data-title">Height:</div>
-					<div class="data-value">
-						{locationData.height} m
-					</div>
-				</Item>
-				<Separator />
 				<Item>
 					<div class="data-title">Wind Speed:</div>
 					<div class="data-value">
@@ -62,9 +56,15 @@
 
 	.card-header {
 		display: flex;
+		flex-direction: column;
+		align-items: center;
 		justify-content: center;
+		margin-top: 16px;
 
-		margin: 16px 0px;
+
+		.subtitle {
+			margin: 4px 0px 8px 0px!important;
+		}
 	}
 
 	.card-body {
@@ -74,10 +74,10 @@
 
 	.data-title {
 		font-weight: bold;
-		flex: 70;
+		flex: 60;
 	}
 
 	.data-value {
-		flex: 30;
+		flex: 40;
 	}
 </style>
