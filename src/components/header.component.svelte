@@ -13,10 +13,10 @@
 			<Section>
 				<Title>paraWind</Title>
 			</Section>
-			<Section>
+			<!-- <Section>
 				<IconButton class="material-icons">my_location</IconButton>
 			</Section>
-			<Section><div class="mdc-typography--headline1">Biberg</div></Section>
+			<Section><div class="mdc-typography--headline1">Biberg</div></Section> -->
 		</Row>
 	</TopAppBar>
 </div>
